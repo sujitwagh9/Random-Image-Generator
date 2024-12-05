@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.container {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btnClass {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Use percentage for better flexibility */
+    max-width: 400px; /* Ensure buttons don't stretch too wide */
+    margin-bottom: 20px; 
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: red;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 45%; /* Adjust button width to be flexible */
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+img {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: auto;
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Limit image size */
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .btnClass {
+        width: 90%; /* Buttons will take more space on smaller screens */
+    }
+
+    .btn {
+        width: 48%; /* Adjust button width on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Make the heading smaller */
+    }
+}
+
+@media (max-width: 480px) {
+    .btnClass {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons larger on very small screens */
+        margin-bottom: 10px; /* Add some space between buttons */
+    }
+
+    img {
+        width: 90%; /* Reduce image size on small screens */
+    }
+}
